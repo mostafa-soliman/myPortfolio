@@ -407,11 +407,47 @@ h2 {
 /*          end section four          */
 /* ---------------------------------- */
 /* ---------------------------------- */
-/*           start section            */
+/*           start section five           */
 /* ---------------------------------- */
 
+#sec5 {
+  background-color: var(--color1);
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 20px 0;
+}
+#sec5 h2 {
+  color: var(--color2);
+  margin: 20px 10px;
+  font-weight: 900;
+  font-size: 2.5rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+#sec5 h2 > span {
+  color: var(--WhiteT);
+
+  font-size: 2rem;
+
+  /* font-family:; */
+}
+
+#sec5 .btn_Hire {
+  background-color: #fff;
+  color: var(--WhiteT);
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 15px 25px;
+  display: inline-block;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
 /* ---------------------------------- */
-/*             end section            */
+/*             end section five          */
 /* ---------------------------------- */
 
 /* ---------------------------------- */
