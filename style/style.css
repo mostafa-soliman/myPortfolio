@@ -9,7 +9,8 @@
   /* Dark Mode Text & Light Mode Elements nav, card*/
   --White: hsl(0, 0%, 100%);
   --WhiteT: hsl(204, 10%, 10%);
-  --color1: #ffd01d;
+  --color1: #fbcc1a;
+  --color2: #cd8383;
 }
 * {
   padding: 0;
@@ -60,8 +61,8 @@ body {
 }
 
 .my_logo {
-  height: 50px;
-  margin-left: 10px;
+  width: 200px;
+  /* margin-left: 10px; */
 }
 #mainmenu {
   background-color: var(--White);
@@ -152,7 +153,7 @@ i {
 /* ---------------------------------- */
 #sec1 {
   margin-top: 75px;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -182,6 +183,228 @@ h1 > span {
 }
 /* ---------------------------------- */
 /*          end section one           */
+/* ---------------------------------- */
+/* ---------------------------------- */
+/*        start section two           */
+/* ---------------------------------- */
+#sec2 .container1 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#sec2 {
+  display: flex;
+  justify-content: center;
+}
+h2 {
+  color: var(--WhiteT);
+  margin: 50px 10px;
+  font-weight: 900;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+#sec2 .img_sec2 {
+  width: 250px;
+}
+#sec2 p b {
+  color: var(--color2);
+}
+#sec2 p {
+  margin-top: 30px;
+  /* margin: 0 auto; */
+  /* width: 90%; */
+  padding: 10px;
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 10px;
+  background-color: var(--White);
+  line-height: 1.5;
+  color: var(--WhiteT);
+}
+#sec2 p > a:hover {
+  background-color: var(--color1);
+  border-radius: 20px;
+  padding: 5px;
+  text-shadow: 0px 5px 10px var(--color1);
+}
+
+/* ---------------------------------- */
+/*          end section two           */
+/* ---------------------------------- */
+/* ---------------------------------- */
+/*      start section three           */
+/* ---------------------------------- */
+#sec3 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#sec3 h2 {
+  width: 100%;
+}
+#sec3 .container {
+  background-color: var(--White);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#sec3 .container a > i {
+  font-size: 3rem;
+}
+#sec3 .container a {
+  margin: 10px;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: var(--color1);
+  color: var(--WhiteT);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--WhiteT);
+  font-weight: 900;
+  font-size: 1.4rem;
+}
+#sec3 .container a:hover {
+  scale: 1.2;
+  box-shadow: 0 0 10px var(--color1);
+}
+
+/*popup*/
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  background-color: var(--Very-Light-Gray);
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+}
+.popup-content h2 {
+  color: var(--color2);
+  margin: 20px 10px;
+  font-weight: 900;
+  font-size: 2.5rem;
+  text-align: left;
+}
+.popup-content h3 {
+  color: var(--WhiteT);
+  margin: 20px 30px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.close-popup {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-popup:hover,
+.close-popup:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.progress {
+  height: 30px;
+  background-color: #ddd;
+  border-radius: 5px;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+.progress-bar {
+  width: 0;
+  height: 100%;
+  background-color: var(--color1);
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  transition: width 0.5s ease;
+}
+
+/*popup*/
+/* ---------------------------------- */
+/*         end section three          */
+/* ---------------------------------- */
+/* ---------------------------------- */
+/*        start section four          */
+/* ---------------------------------- */
+#sec4 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#sec4 .container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#sec4 .container figure {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#sec4 h3 {
+  color: var(--color2);
+  margin: 20px 0px;
+  font-weight: 900;
+  font-size: 1.4rem;
+  text-align: left;
+  width: 100%;
+}
+
+#sec4 .container figure img {
+  width: 90vw;
+  border: 5px solid #ddd;
+  border-radius: 20px;
+  margin: 20px 0px;
+}
+#sec4 .container figure img:hover {
+  scale: 1.05;
+  box-shadow: 0 0 10px var(--color1);
+}
+#sec4 .container figure figcaption {
+  text-align: justify;
+  background-color: var(--White);
+  padding: 10px;
+  color: var(--WhiteT);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.btnM {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* ---------------------------------- */
+/*          end section four          */
 /* ---------------------------------- */
 /* ---------------------------------- */
 /*           start section            */
@@ -219,6 +442,14 @@ h1 > span {
   .container {
     width: 720px;
   }
+  #sec2 p {
+    text-align: justify;
+  }
+  #sec3 .container a {
+    margin: 20px;
+    width: 150px;
+    height: 150px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -255,6 +486,7 @@ h1 > span {
     top: 50%;
     transform: translateY(-50%);
   }
+  /* sec1 */
   #sec1 {
     display: flex;
     flex-direction: row-reverse;
@@ -279,6 +511,40 @@ h1 > span {
   #arti_sec1 > p {
     line-height: 1.5;
   }
+  /* sec2 ************************************/
+  /* #sec2 .container h2 {
+    width: 100%;
+  } */
+  #sec2 .container1 {
+    margin: 0 auto;
+    display: block;
+  }
+  #sec2 .img_sec2 {
+    float: left;
+    margin: 20px 20px;
+  }
+  #sec2 .img_sec2::after {
+    clear: both;
+  }
+  #sec2 p {
+    text-align: justify;
+  }
+
+  #sec4 .container figure figcaption .figCont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  #sec4 .container figure figcaption .figCont p {
+    width: 80%;
+  }
+  #sec4 .container figure figcaption .btnM {
+    flex-wrap: wrap;
+  }
+  /* #sec4 .container figure figcaption .btnM {
+    clear: both;
+  } */
 }
 
 @media (min-width: 1200px) {

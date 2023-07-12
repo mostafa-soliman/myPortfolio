@@ -24,3 +24,18 @@ function toggleMode() {
     checked = false;
   }
 }
+
+// popup
+
+function openPopup(skill, skillName, skillPercentage) {
+  document.getElementById("popupTitle").textContent = skillName;
+  document.getElementById("popupProgressBar").style.width =
+    skillPercentage + "%";
+  document.getElementById("popupProgressBar").textContent =
+    skillPercentage + "%";
+  document.getElementById("popup").style.display = "block";
+}
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
