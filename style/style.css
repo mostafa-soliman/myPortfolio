@@ -1,0 +1,355 @@
+/* Variables */
+:root {
+  /* Light Mode Text */
+  --Very-Dark-Blue: hsl(204, 10%, 10%);
+  /* Light Mode Input */
+  --Dark-Gray: hsl(0, 0%, 52%);
+  /* Light Mode Background */
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  /* Dark Mode Text & Light Mode Elements nav, card*/
+  --White: hsl(0, 0%, 100%);
+  --WhiteT: hsl(204, 10%, 10%);
+  --color1: #ffd01d;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Plus_Jakarta_Sans;
+  src: url(/assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+}
+html {
+  font-size: 16px;
+  font-family: Plus_Jakarta_Sans;
+}
+.dark {
+  /* Dark Mode Elements nav , card Dark-Blue*/
+  --White: hsl(209, 23%, 22%);
+  /* Dark Mode Background Very-Dark-Blue */
+  --Very-Light-Gray: hsl(207, 26%, 17%);
+  /* Dark Mode Text & Light Mode Elements nav, card*/
+  --WhiteT: hsl(0, 0%, 100%);
+}
+body {
+  background-color: var(--Very-Light-Gray);
+  /* padding-top: 60px; */
+}
+.btn {
+  background-color: var(--color1);
+  color: var(--WhiteT);
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 15px 25px;
+  display: inline-block;
+  border-radius: 25px;
+  text-decoration: none;
+  margin: 10px;
+}
+
+/* ---------------------------------- */
+/*          start header              */
+/* ---------------------------------- */
+
+.container {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.my_logo {
+  height: 50px;
+  margin-left: 10px;
+}
+#mainmenu {
+  background-color: var(--White);
+  padding: 5px 0;
+
+  position: absolute;
+  width: 100%;
+  top: 10px;
+  /* left: 0; */
+}
+#mainmenu .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  box-shadow: 0px 5px 10px var(--White);
+}
+#menuControl {
+  display: none;
+}
+#mainmenu .container .burgerMenu {
+  padding: 3px 5px;
+  border-radius: 10px;
+  border: thin solid var(--WhiteT);
+  font-size: 1.2rem;
+  color: var(--WhiteT);
+}
+#mainmenu .container nav {
+  width: 100%;
+  display: none;
+}
+
+#mainmenu #menuControl:checked + nav {
+  display: block;
+}
+#mainmenu .container nav > a {
+  text-decoration: none;
+  padding: 10px 10px;
+  color: var(--WhiteT);
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#mainmenu .container nav > a:hover {
+  background-color: var(--color1);
+  color: var(--White);
+  box-shadow: inset 0px 0px 10px #fff;
+}
+
+#mainmenu .container .rightheader {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: end;
+  align-items: center;
+}
+#mainmenu .container .rightheader .DLmode:hover {
+  box-shadow: 0px 0px 10px var(--color1);
+}
+#mainmenu .container .rightheader .giticon,
+#mainmenu .container .rightheader .DLmode {
+  margin: 0 5px 0 5px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+#mainmenu .container .rightheader .giticon:hover {
+  box-shadow: 0px 0px 10px var(--color1);
+}
+
+i {
+  color: var(--WhiteT);
+}
+.btn > i {
+  margin-left: 15px;
+}
+
+/* ---------------------------------- */
+/*           end header               */
+/* ---------------------------------- */
+
+/* ---------------------------------- */
+/*         start section one          */
+/* ---------------------------------- */
+#sec1 {
+  margin-top: 75px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+section .img_sec1 {
+  width: 465px;
+}
+h1 {
+  font-weight: 900;
+  font-size: 3rem;
+}
+h1 > span {
+  color: #cd8383;
+}
+#arti_sec1 {
+  color: var(--WhiteT);
+  text-transform: capitalize;
+  background-color: var(--White);
+  padding: 5px;
+}
+
+#arti_sec1 p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: justify;
+  margin-bottom: 10px;
+}
+/* ---------------------------------- */
+/*          end section one           */
+/* ---------------------------------- */
+/* ---------------------------------- */
+/*           start section            */
+/* ---------------------------------- */
+
+/* ---------------------------------- */
+/*             end section            */
+/* ---------------------------------- */
+
+/* ---------------------------------- */
+/*           start footer             */
+/* ---------------------------------- */
+
+/* ---------------------------------- */
+/*           end footer             */
+/* ---------------------------------- */
+
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+  #sec1 > .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  #sec1 .container #arti_sec1 {
+    width: 90%;
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 940px;
+  }
+  #mainmenu .container nav,
+  #mainmenu #menuControl:checked + nav {
+    width: auto;
+    display: flex;
+    align-items: center;
+  }
+  #mainmenu .container .burgerMenu {
+    display: none;
+  }
+  #mainmenu {
+    /* position: relative; */
+  }
+  #mainmenu .container {
+    flex-wrap: nowrap;
+    text-align: center;
+    width: 90%;
+  }
+  #mainmenu .container nav > a {
+    display: inline-block;
+    width: auto;
+  }
+  #mainmenu nav div {
+    width: auto;
+  }
+  #mainmenu .container .rightheader {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  #sec1 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  #sec1 .container .img_sec1 {
+    order: 2;
+  }
+
+  #sec1 > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+  }
+  #sec1 .container #arti_sec1 {
+    width: 49%;
+    order: 1;
+    text-align: left;
+  }
+  #arti_sec1 > p {
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+  section .img_sec1 {
+    width: 500px;
+  }
+  #sec1 .container #arti_sec1 {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1340px;
+  }
+  section .img_sec1 {
+    width: 550px;
+  }
+}
+/* slider Dark light mode */
+/* The switch - the box around the slider  */
+/* .switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+} */
+
+/* Hide default HTML checkbox */
+/* .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+} */
+
+/* The slider */
+/* .slider {
+  --background: #28096b;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background);
+  transition: 0.5s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 50%;
+  left: 10%;
+  bottom: 15%;
+  box-shadow: inset 8px -4px 0px 0px #fff000;
+  background: var(--background);
+  transition: 0.5s;
+}
+
+input:checked + .slider {
+  background-color: #522ba7;
+}
+
+input:checked + .slider:before {
+  transform: translateX(100%);
+  box-shadow: inset 15px -4px 0px 15px #fff000;
+} */

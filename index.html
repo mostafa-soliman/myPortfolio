@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/mostafa_fadali.png"
+    />
+    <link rel="stylesheet" href="/style/style.css" />
+    <link rel="stylesheet" href="/style/all.css" />
+    <title>Fadali Portfolio</title>
+  </head>
+  <body>
+    <header id="mainmenu">
+      <div class="container">
+        <img class="my_logo" src="assets/images/logo2.png" alt="MosFadali" />
+        <label class="burgerMenu" for="menuControl"
+          ><i class="fas fa-bars"></i
+        ></label>
+        <input type="checkbox" id="menuControl" />
+        <nav>
+          <div class="rightheader">
+            <div class="DLmode" onclick="toggleCheckbox()">
+              <!-- <label id="frnt_awsme" class="switch">
+              <input type="checkbox" id="light_dark_mode" />
+              <span class="slider"></span>
+            </label> -->
+              <i id="frnt_awsme" class="fa-regular fa-moon"></i>
+              <label id="modes" for="light_dark_mode"></label>
+              <input type="checkbox" name="" id="light_dark_mode" hidden />
+            </div>
+            <a
+              href="https://github.com/mostafa-soliman"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="giticon"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </div>
+          <a href="#sec1">Home</a>
+          <a href="#">About</a>
+          <a href="#">Skills</a>
+          <a href="#">Portfolio</a>
+          <a href="#">Services</a>
+          <!--<a href="#">Testmonial</a> -->
+          <a href="#">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <section id="sec1">
+      <div class="container">
+        <img
+          src="./assets/images/img_sec1.png"
+          alt="mostafa_fadali_img"
+          class="img_sec1"
+        />
+        <article id="arti_sec1">
+          <h1>
+            Hi there, I'm a <br />passionate<br />
+            <span
+              >software <br />
+              engineer</span
+            >
+          </h1>
+          <p>
+            my name is <b>Mostafa Fadali,</b> I specialize in front-end
+            development,<br />
+            with a strong focus on Angular. I'm dedicated to crafting robust
+            solutions that deliver exceptional UX
+          </p>
+          <a
+            class="btn"
+            href="./assets/CV Mostafa Fadaly FRONT-END-DEVELOPER.pdf"
+            download
+            >Download CV<i class="fa-solid fa-arrow-down fa-bounce"></i
+          ></a>
+        </article>
+      </div>
+    </section>
+    <section id="sec2">
+      <div class="container"></div>
+    </section>
+
+    <script src="scripts/scripts.js"></script>
+  </body>
+</html>
