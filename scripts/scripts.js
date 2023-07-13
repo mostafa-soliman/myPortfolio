@@ -4,7 +4,13 @@ let body_mode = document.getElementsByTagName("body")[0];
 let toggle_btn = document.getElementById("light_dark_mode");
 let img_src = document.getElementsByClassName("my_logo")[0];
 let checked = false;
-img_src.setAttribute("src", "./assets/images/logoLight.png");
+// img_src.setAttribute("src", "./assets/images/logoLight.png");
+
+// let darkMode = JSON.parse(localStorage.getItem("darkMode")) || false;
+
+// function saveTasks() {
+//   localStorage.setItem("darkMode", JSON.stringify(darkMode));
+// }
 
 function toggleCheckbox() {
   toggle_btn.checked = !toggle_btn.checked;
@@ -13,21 +19,28 @@ function toggleCheckbox() {
 toggle_btn.addEventListener("change", toggleMode);
 function toggleMode() {
   if (checked === false) {
-    // nav_label.innerHTML = "Dark Mode";
     nav_icon.className = "fa-solid fa-moon";
     body_mode.className = "dark";
     img_src.setAttribute("src", "./assets/images/logoDark.png");
     checked = true;
+    localStorage.setItem("darkMode", "true"); // حفظ وضع الظلام في localStorage
   } else {
-    // nav_label.innerHTML = "Dark Mode";
     nav_icon.className = "fa-regular fa-moon";
     body_mode.className = "";
     img_src.setAttribute("src", "./assets/images/logoLight.png");
 
     checked = false;
+    localStorage.setItem("darkMode", "false"); // حفظ وضع النور في localStorage
   }
+  // saveTasks();
 }
 
+window.addEventListener("load", function () {
+  const darkMode = localStorage.getItem("darkMode");
+  if (darkMode === "true") {
+    toggleCheckbox();
+  }
+});
 // popup
 
 function openPopup(skill, skillName, skillPercentage) {

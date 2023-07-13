@@ -160,9 +160,16 @@ i {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  /* align-items: center; */
+}
+#sec1 .container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 section .img_sec1 {
-  width: 465px;
+  /* width: 465px; */
+  width: 90%;
 }
 h1 {
   font-weight: 900;
@@ -190,15 +197,16 @@ h1 > span {
 /* ---------------------------------- */
 /*        start section two           */
 /* ---------------------------------- */
+#sec2 {
+  display: flex;
+  justify-content: center;
+}
 #sec2 .container1 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-#sec2 {
-  display: flex;
-  justify-content: center;
-}
+
 h2 {
   color: var(--WhiteT);
   margin: 50px 10px;
@@ -516,15 +524,16 @@ h2 {
   .container {
     width: 540px;
   }
-  #sec1 > .container {
-    display: flex;
-    justify-content: center;
+  #sec1 .container {
     align-items: center;
-    flex-wrap: wrap;
+  }
+  section .img_sec1 {
+    width: 465px;
+    /* width: 90%; */
   }
   #sec1 .container #arti_sec1 {
     width: 90%;
-    margin-top: 10px;
+    margin: 10px;
   }
 }
 
@@ -593,10 +602,12 @@ h2 {
     align-items: center;
     flex-wrap: wrap-reverse;
   }
+
   #sec1 .container #arti_sec1 {
     width: 49%;
     order: 1;
     text-align: left;
+    margin: 10px 0px 10px 10px;
   }
   #arti_sec1 > p {
     line-height: 1.5;
