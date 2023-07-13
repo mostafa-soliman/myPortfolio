@@ -2,8 +2,9 @@ let nav_label = document.getElementById("modes");
 let nav_icon = document.getElementById("frnt_awsme");
 let body_mode = document.getElementsByTagName("body")[0];
 let toggle_btn = document.getElementById("light_dark_mode");
-
+let img_src = document.getElementsByClassName("my_logo")[0];
 let checked = false;
+img_src.setAttribute("src", "./assets/images/logoLight.png");
 
 function toggleCheckbox() {
   toggle_btn.checked = !toggle_btn.checked;
@@ -15,11 +16,13 @@ function toggleMode() {
     // nav_label.innerHTML = "Dark Mode";
     nav_icon.className = "fa-solid fa-moon";
     body_mode.className = "dark";
+    img_src.setAttribute("src", "./assets/images/logoDark.png");
     checked = true;
   } else {
     // nav_label.innerHTML = "Dark Mode";
     nav_icon.className = "fa-regular fa-moon";
     body_mode.className = "";
+    img_src.setAttribute("src", "./assets/images/logoLight.png");
 
     checked = false;
   }
