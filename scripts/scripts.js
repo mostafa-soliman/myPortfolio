@@ -55,3 +55,13 @@ function openPopup(skill, skillName, skillPercentage) {
 function closePopup() {
   document.getElementById("popup").style.display = "none";
 }
+function activateNavItem(element) {
+  // إزالة الكلاس الحالي من جميع عناصر النافبار
+  let navItems = document.querySelectorAll("nav a");
+  navItems.forEach((item) => {
+    item.classList.remove("active");
+  });
+
+  // إضافة الكلاس "active" إلى العنصر الذي تم النقر عليه
+  element.classList.add("active");
+}

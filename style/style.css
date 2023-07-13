@@ -115,6 +115,9 @@ body {
   /* box-shadow: inset 0px 0px 10px #fff; */
   border-bottom: thick solid var(--color1);
 }
+.active {
+  border-bottom: thick solid var(--color1);
+}
 
 #mainmenu .container .rightheader {
   display: flex;
