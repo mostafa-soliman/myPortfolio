@@ -168,6 +168,7 @@ i {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 section .img_sec1 {
   /* width: 465px; */
@@ -261,6 +262,7 @@ h2 {
 }
 #sec3 .container {
   background-color: var(--White);
+  overflow: hidden;
 
   display: flex;
   justify-content: space-around;

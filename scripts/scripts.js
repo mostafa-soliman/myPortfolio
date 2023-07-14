@@ -62,6 +62,26 @@ function activateNavItem(element) {
 
   element.classList.add("active");
 }
+
+function addWowClass() {
+  let wowClass1 = "wow";
+  let wowClass2 = "rollIn";
+  let duration = "2s";
+  let offset = "20";
+  let delay = ".5s";
+
+  let elements = document.querySelectorAll("#sec3 .container a");
+  for (let i = 0; i < elements.length; i++) {
+    elements[i].classList.add(wowClass1);
+    elements[i].classList.add(wowClass2);
+    elements[i].setAttribute("data-wow-duration", duration);
+    elements[i].setAttribute("data-wow-offset", offset);
+    elements[i].setAttribute("data-wow-delay", delay);
+  }
+}
+document.addEventListener("DOMContentLoaded", function () {
+  addWowClass();
+});
 // // إغلاق القائمة المنبثقة عند النقر خارجها
 // document.addEventListener("click", function (event) {
 //   if (menuControl.checked && !event.target.matches("#menuControl")) {
