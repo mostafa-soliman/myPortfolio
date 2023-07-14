@@ -13,6 +13,7 @@
     />
     <link rel="stylesheet" href="/style/style.css" />
     <link rel="stylesheet" href="/style/all.css" />
+    <link rel="stylesheet" href="/style/animate.css" />
     <title>Fadali Portfolio</title>
   </head>
   <body>
@@ -27,6 +28,7 @@
           ><i class="fas fa-bars"></i
         ></label>
         <input type="checkbox" id="menuControl" />
+        <!-- onclick="closeBurgerMenu()" -->
         <nav>
           <div class="rightheader">
             <div class="DLmode" onclick="toggleCheckbox()">
@@ -62,7 +64,8 @@
         <img
           src="./assets/images/img2_sec1.png"
           alt="mostafa_fadali_img"
-          class="img_sec1"
+          class="wow bounceOutRight img_sec1"
+          data-wow-delay="1s"
         />
         <article id="arti_sec1">
           <h1>
@@ -320,5 +323,9 @@
       >.
     </footer>
     <script src="scripts/scripts.js"></script>
+    <script src="scripts/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
   </body>
 </html>

@@ -3,14 +3,11 @@ let nav_icon = document.getElementById("frnt_awsme");
 let body_mode = document.getElementsByTagName("body")[0];
 let toggle_btn = document.getElementById("light_dark_mode");
 let img_src = document.getElementsByClassName("my_logo")[0];
+// let closMenu = document.querySelectorAll("#mainmenu .container nav a");
+// let menuControl = document.getElementById("menuControl");
+// let nav = document.querySelector("#mainmenu .container nav ");
+
 let checked = false;
-// img_src.setAttribute("src", "./assets/images/logoLight.png");
-
-// let darkMode = JSON.parse(localStorage.getItem("darkMode")) || false;
-
-// function saveTasks() {
-//   localStorage.setItem("darkMode", JSON.stringify(darkMode));
-// }
 
 function toggleCheckbox() {
   toggle_btn.checked = !toggle_btn.checked;
@@ -32,7 +29,6 @@ function toggleMode() {
     checked = false;
     localStorage.setItem("darkMode", "false"); // حفظ وضع النور في localStorage
   }
-  // saveTasks();
 }
 
 window.addEventListener("load", function () {
@@ -55,13 +51,46 @@ function openPopup(skill, skillName, skillPercentage) {
 function closePopup() {
   document.getElementById("popup").style.display = "none";
 }
+
+// add and remove active in navbar
+
 function activateNavItem(element) {
-  // إزالة الكلاس الحالي من جميع عناصر النافبار
   let navItems = document.querySelectorAll("nav a");
   navItems.forEach((item) => {
     item.classList.remove("active");
   });
 
-  // إضافة الكلاس "active" إلى العنصر الذي تم النقر عليه
   element.classList.add("active");
 }
+// // إغلاق القائمة المنبثقة عند النقر خارجها
+// document.addEventListener("click", function (event) {
+//   if (menuControl.checked && !event.target.matches("#menuControl")) {
+//     menuControl.checked = false;
+//     closeBurgerMenu();
+//   }
+// });
+
+// // تنفيذ الأمر المحدد وإغلاق القائمة المنبثقة عند النقر على رابط داخل القائمة
+// const menuLinks = document.querySelectorAll("#mainmenu .container nav a");
+// menuLinks.forEach(function (link) {
+//   link.addEventListener("click", function (event) {
+//     event.preventDefault(); // لمنع الانتقال إلى الصفحة الجديدة
+//     // تنفيذ الأمر المطلوب عند النقر على الرابط هنا
+//     closeBurgerMenu();
+//   });
+// });
+
+// closMenu.forEach((elem) => {
+//   elem.addEventListener("click", closeBurgerMenu);
+// });
+
+// function closeBurgerMenu() {
+//   if (window.innerWidth < 992) {
+//     nav.style.display = "none";
+//     menuControl.checked = false;
+//   } else {
+//     nav.style.display = "block";
+//     menuControl.checked = true;
+//   }
+// }
+//

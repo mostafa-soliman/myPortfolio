@@ -67,7 +67,6 @@ body {
 #mainmenu {
   background-color: var(--White);
   padding: 5px 0;
-
   position: absolute;
   width: 100%;
   top: 10px;
