@@ -230,7 +230,7 @@ h2 {
   /* width: 90%; */
   padding: 10px;
   text-transform: capitalize;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 400;
   text-align: center;
   margin-bottom: 10px;
@@ -386,11 +386,11 @@ h2 {
   justify-content: center;
   flex-wrap: wrap;
 }
-#sec4 h3 {
+#sec4 .container h2 {
   color: var(--color2);
   margin: 20px 0px;
   font-weight: 900;
-  font-size: 1.4rem;
+  font-size: 2.5rem;
   text-align: left;
   width: 100%;
 }
@@ -406,7 +406,7 @@ h2 {
   box-shadow: 0 0 10px var(--color1);
 }
 #sec4 .container figure figcaption {
-  text-align: justify;
+  text-align: left;
   background-color: var(--White);
   padding: 10px;
   color: var(--WhiteT);
