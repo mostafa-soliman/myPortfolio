@@ -416,6 +416,11 @@ h2 {
 .btnM {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+}
+.btnM a {
+  /* display: flex;
+  justify-content: space-around; */
 }
 
 /* ---------------------------------- */
