@@ -687,6 +687,9 @@ h2 {
   }
   #sec6 a {
     margin: 0 20px;
+    font-size: 4rem;
+    width: 100px;
+    height: 100px;
   }
 }
 
