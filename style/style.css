@@ -25,6 +25,7 @@
 html {
   font-size: 16px;
   font-family: Plus_Jakarta_Sans;
+  scroll-behavior: smooth;
 }
 .dark {
   /* Dark Mode Elements nav , card Dark-Blue*/
@@ -61,6 +62,7 @@ body {
 }
 
 .my_logo {
+  padding: 5px;
   width: 120px;
   margin-left: 20px;
   z-index: 999;
@@ -163,15 +165,12 @@ i {
 /*         start section one          */
 /* ---------------------------------- */
 #sec1 {
-  /* margin-top: 75px; */
-  /* height: 100vh; */
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  /* align-items: center; */
 }
 #sec1 .container {
-  margin-top: 70px;
+  margin-top: 35px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -179,14 +178,14 @@ i {
 }
 section .img_sec1 {
   /* width: 465px; */
-  width: 90%;
+  width: 75%;
 }
 h1 {
   font-weight: 900;
   font-size: 3rem;
 }
 h1 > span {
-  color: #cd8383;
+  color: var(--color2);
 }
 #arti_sec1 {
   color: var(--WhiteT);
@@ -196,7 +195,7 @@ h1 > span {
 }
 
 #arti_sec1 p {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 400;
   text-align: left;
   margin-bottom: 10px;
@@ -439,41 +438,42 @@ h2 {
 /*           start section five           */
 /* ---------------------------------- */
 
-#sec5 {
+#div_sec5 {
   background-color: var(--color1);
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  margin: 20px 0;
+  width: 100%;
 }
-#sec5 .container {
+#div_sec5 .container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: center;
 }
-#sec5 h2 {
+#div_sec5 h2 {
+  width: 90%;
   color: var(--color2);
   margin: 20px 10px;
   font-weight: 900;
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-align: center;
   text-transform: capitalize;
 }
-#sec5 h2 > span {
+#div_sec5 h2 > span {
   color: var(--WhiteT);
 
-  font-size: 2rem;
+  font-size: 1.8rem;
 
   /* font-family:; */
 }
 
-#sec5 .btn_Hire {
+#div_sec5 .btn_Hire {
   background-color: #fff;
   color: var(--Very-Dark-Blue);
   text-transform: capitalize;
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 700;
   padding: 15px 25px;
   display: inline-block;
@@ -481,39 +481,91 @@ h2 {
   text-decoration: none;
   margin-bottom: 10px;
 }
-#sec5 + h2 {
-  color: var(--WhiteT);
-  margin: 20px 10px;
-  font-weight: 900;
-  font-size: 1.6rem;
-  text-align: center;
-  text-transform: capitalize;
-  line-height: 1.2;
-}
+
 /* ---------------------------------- */
 /*             end section five          */
 /* ---------------------------------- */
+/* ----------------start sec6------------------- */
+
+#sec5 {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#sec5 .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#sec5 h3 {
+  color: var(--WhiteT);
+  background-color: var(--White);
+  font-weight: 900;
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: capitalize;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.contenar_sec6 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#sec5 form {
+  width: 90%;
+  /* border: thin solid #4b5264; */
+  background-color: #000;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+#sec5 form * {
+  width: 100%;
+  border-style: none;
+  outline-style: none;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+}
+#sec5 form input[type="submit"] {
+  background-color: var(--color1);
+}
+#sec5 form input[type="submit"]:hover {
+  box-shadow: 0 0 15px 0 rgba(242, 134, 28, 1);
+}
+
+/* ----------------end sec6------------------- */
 /* ---------------------------------- */
-/*             start section six      */
+/*             start section seven      */
 /* ---------------------------------- */
-#sec6 {
+#div_sec7 {
   background-color: var(--White);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-#sec6 h2 {
+#div_sec7 h2 {
   color: var(--color2);
   padding: 30px 0;
   margin: 0;
 }
-#sec6 .container {
+#div_sec7 .container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   padding: 10px 0 30px 0;
 }
-#sec6 a {
+#div_sec7 a {
   text-decoration: none;
   color: var(--WhiteT);
   margin: 0 5px 0 5px;
@@ -526,7 +578,7 @@ h2 {
   font-size: 2.5rem;
   border: thin solid var(--WhiteT);
 }
-#sec6 a:hover {
+#div_sec7 a:hover {
   scale: 1.05;
 }
 /* ---------------------------------- */
@@ -560,10 +612,10 @@ h2 {
     width: 90%;
     margin: 10px;
   }
-  #sec6 .container {
+  #div_sec7 .container {
     justify-content: center;
   }
-  #sec6 a {
+  #div_sec7 a {
     margin: 0 20px;
   }
 }
@@ -579,6 +631,13 @@ h2 {
     margin: 20px;
     width: 150px;
     height: 150px;
+  }
+  #sec5 .contenar_sec6 {
+    width: 70%;
+    margin: 0 auto;
+  }
+  #sec5 form {
+    padding: 45px;
   }
 }
 
@@ -621,6 +680,7 @@ h2 {
   }
   /* sec1 */
   #sec1 {
+    margin-top: 70px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
@@ -688,14 +748,35 @@ h2 {
   /* #sec4 .container figure figcaption .btnM {
     clear: both;
   } */
-  #sec6 .container {
+
+  #div_sec7 .container {
     justify-content: center;
   }
-  #sec6 a {
-    margin: 0 20px;
+  #div_sec7 a {
+    margin: 0;
     font-size: 4rem;
     width: 100px;
     height: 100px;
+  }
+  #sec5 .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  #div_sec7 {
+    width: 49%;
+    margin-top: -283px; /* تعديل الهامش السفلي */
+  }
+  #sec5 h3 {
+    width: 49%;
+    padding: 10px;
+  }
+  #sec5 .contenar_sec6 {
+    width: 49%;
+  }
+  #sec5 form {
+    padding: 15px;
   }
 }
 

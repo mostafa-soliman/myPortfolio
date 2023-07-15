@@ -54,14 +54,66 @@ function closePopup() {
 
 // add and remove active in navbar
 
-function activateNavItem(element) {
+// function activateNavItem(element) {
+//   let navItems = document.querySelectorAll("nav a");
+//   navItems.forEach((item) => {
+//     item.classList.remove("active");
+//   });
+
+//   element.classList.add("active");
+// }
+
+window.addEventListener("scroll", function () {
+  let scrollPosition = window.scrollY;
+
+  let sections = document.querySelectorAll("section");
+  sections.forEach((section) => {
+    let sectionTop = section.offsetTop;
+    let sectionHeight = section.offsetHeight;
+
+    if (
+      scrollPosition >= sectionTop &&
+      scrollPosition < sectionTop + sectionHeight
+    ) {
+      activateNavItem(section.id); // استدعاء الدالة مع تمرير معرف القسم
+    }
+  });
+});
+
+function activateNavItem(sectionId) {
   let navItems = document.querySelectorAll("nav a");
   navItems.forEach((item) => {
     item.classList.remove("active");
   });
 
-  element.classList.add("active");
+  let targetNav = document.querySelector(`nav a[href="#${sectionId}"]`);
+  targetNav.classList.add("active");
 }
+
+// window.addEventListener("scroll", function () {
+//   let scrollPosition = window.scrollY;
+
+//   let sections = document.querySelectorAll("section");
+//   sections.forEach((section) => {
+//     let sectionTop = section.offsetTop;
+//     let sectionHeight = section.offsetHeight;
+
+//     if (
+//       scrollPosition >= sectionTop &&
+//       scrollPosition < sectionTop + sectionHeight
+//     ) {
+//       // إزالة العناصر المفعلة من قائمة التنقل
+//       let navItems = document.querySelectorAll("nav a");
+//       navItems.forEach((item) => {
+//         item.classList.remove("active");
+//       });
+
+//       // تفعيل العنصر المناسب في قائمة التنقل
+//       let targetNav = document.querySelector(`nav a[href="#${section.id}"]`);
+//       targetNav.classList.add("active");
+//     }
+//   });
+// });
 
 function addWowClass() {
   let wowClass1 = "wow";
@@ -71,7 +123,7 @@ function addWowClass() {
   let delay = ".5s";
 
   let elements = document.querySelectorAll("#sec3 .container a");
-  let elements1 = document.querySelectorAll("#sec6 .container a");
+  let elements1 = document.querySelectorAll("#div_sec7 .container a");
   // sec3
   for (let i = 0; i < elements.length; i++) {
     elements[i].classList.add(wowClass1);
@@ -80,7 +132,7 @@ function addWowClass() {
     elements[i].setAttribute("data-wow-offset", offset);
     elements[i].setAttribute("data-wow-delay", delay);
   }
-  // sec6
+  // sec7
   for (let i = 0; i < elements1.length; i++) {
     elements1[i].classList.add(wowClass1);
     elements1[i].classList.add(wowClass2);
@@ -117,3 +169,55 @@ function closeBurgerMenu() {
   let menuControl = document.getElementById("menuControl");
   menuControl.checked = false;
 }
+
+// const form = document.querySelector("form");
+
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault(); // Prevent form submission
+
+//   const senderNameInput = document.querySelector("#text");
+//   const senderEmailInput = document.querySelector("#email");
+//   const subjectInput = document.querySelector("#title");
+//   const messageInput = document.querySelector("#massage");
+
+//   const senderName = senderNameInput.value;
+//   const senderEmail = senderEmailInput.value;
+//   const subject = subjectInput.value;
+//   const message = messageInput.value;
+
+//   const formData = new FormData();
+//   formData.append("from", `${senderName} <${senderEmail}>`);
+//   formData.append("to", "m.fadaly52@gmail.com");
+//   formData.append("subject", subject);
+//   formData.append("text", message);
+
+//   fetch("https://api.mailgun.net/v3/your-domain.com/messages", {
+//     method: "POST",
+//     headers: {
+//       Authorization:
+//         "Basic " + btoa("api:" + "448894eb42c37dd6b6d4e6169789a6bc"),
+//     },
+//     body: formData,
+//   })
+//     .then((response) => {
+//       if (response.ok) {
+//         // Email sent successfully
+//         console.log("Email sent!");
+//         // You can add any success message or further actions here
+//       } else {
+//         // Handle error
+//         console.log("Error sending email:", response.statusText);
+//       }
+//     })
+//     .catch((error) => {
+//       console.error("Error sending email:", error);
+//     });
+
+//   // Reset the form after submission
+//   form.reset();
+//   // Optionally, clear the input fields
+//   senderNameInput.value = "";
+//   senderEmailInput.value = "";
+//   subjectInput.value = "";
+//   messageInput.value = "";
+// });
