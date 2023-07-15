@@ -163,7 +163,7 @@ i {
 /*         start section one          */
 /* ---------------------------------- */
 #sec1 {
-  margin-top: 75px;
+  /* margin-top: 75px; */
   /* height: 100vh; */
   display: flex;
   justify-content: center;
@@ -171,6 +171,7 @@ i {
   /* align-items: center; */
 }
 #sec1 .container {
+  margin-top: 70px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
