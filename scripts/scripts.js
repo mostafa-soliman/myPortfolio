@@ -71,12 +71,22 @@ function addWowClass() {
   let delay = ".5s";
 
   let elements = document.querySelectorAll("#sec3 .container a");
+  let elements1 = document.querySelectorAll("#sec6 .container a");
+  // sec3
   for (let i = 0; i < elements.length; i++) {
     elements[i].classList.add(wowClass1);
     elements[i].classList.add(wowClass2);
     elements[i].setAttribute("data-wow-duration", duration);
     elements[i].setAttribute("data-wow-offset", offset);
     elements[i].setAttribute("data-wow-delay", delay);
+  }
+  // sec6
+  for (let i = 0; i < elements1.length; i++) {
+    elements1[i].classList.add(wowClass1);
+    elements1[i].classList.add(wowClass2);
+    elements1[i].setAttribute("data-wow-duration", duration);
+    elements1[i].setAttribute("data-wow-offset", offset);
+    elements1[i].setAttribute("data-wow-delay", delay);
   }
 }
 document.addEventListener("DOMContentLoaded", function () {

@@ -384,7 +384,7 @@ h2 {
 }
 #sec4 .container figure {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
 }
@@ -663,7 +663,6 @@ h2 {
     padding: 20px;
   }
   #sec4 .container figure figcaption .figCont p {
-    width: 80%;
     font-size: 1.5rem;
   }
   #sec4 .container figure figcaption .btnM {
