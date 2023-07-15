@@ -97,13 +97,13 @@ document.addEventListener("DOMContentLoaded", function () {
 let currentYear = new Date().getFullYear();
 document.getElementById("currentYear").textContent = currentYear;
 
-// // إغلاق القائمة المنبثقة عند النقر خارجها
-// document.addEventListener("click", function (event) {
-//   if (menuControl.checked && !event.target.matches("#menuControl")) {
-//     menuControl.checked = false;
-//     closeBurgerMenu();
-//   }
-// });
+// إغلاق القائمة المنبثقة عند النقر خارجها
+document.addEventListener("click", function (event) {
+  if (menuControl.checked && !event.target.matches("#menuControl")) {
+    menuControl.checked = false;
+    closeBurgerMenu();
+  }
+});
 
 // // تنفيذ الأمر المحدد وإغلاق القائمة المنبثقة عند النقر على رابط داخل القائمة
 // const menuLinks = document.querySelectorAll("#mainmenu .container nav a");
@@ -128,4 +128,25 @@ document.getElementById("currentYear").textContent = currentYear;
 //     menuControl.checked = true;
 //   }
 // }
-//
+
+const menuLinks = document.querySelectorAll("#mainmenu .container nav a");
+menuLinks.forEach(function (link) {
+  link.addEventListener("click", function (event) {
+    // event.preventDefault(); // لمنع الانتقال إلى الصفحة الجديدة
+    // تنفيذ الأمر المطلوب عند النقر على الرابط هنا
+    closeBurgerMenu();
+  });
+});
+
+// const header = document.getElementById("mainmenu");
+// header.addEventListener("click", function (event) {
+//   // التأكد من أن العنصر الذي تم النقر عليه ينتمي إلى الناف بار نفسها
+//   if (!event.target.closest("nav")) {
+//     closeBurgerMenu();
+//   }
+// });
+
+function closeBurgerMenu() {
+  const menuControl = document.getElementById("menuControl");
+  menuControl.checked = false;
+}
