@@ -560,6 +560,12 @@ h2 {
     width: 90%;
     margin: 10px;
   }
+  #sec6 .container {
+    justify-content: center;
+  }
+  #sec6 a {
+    margin: 0 20px;
+  }
 }
 
 @media (min-width: 768px) {
