@@ -72,6 +72,8 @@ body {
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 998;
+
   /* margin-bottom: 100px; */
   /* top: 10px; */
   /* left: 0; */
@@ -173,7 +175,6 @@ i {
   justify-content: center;
   flex-wrap: wrap;
   overflow: hidden;
-  margin-top: 65px;
 }
 section .img_sec1 {
   /* width: 465px; */
@@ -603,10 +604,13 @@ h2 {
     width: auto;
   }
   #mainmenu .container .rightheader {
-    position: absolute;
+    /* position: absolute;
     right: 5px;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%); */
+    position: fixed;
+    /* top: 5px; */
+    right: 5px;
   }
   /* sec1 */
   #sec1 {
