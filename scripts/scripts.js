@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
 let currentYear = new Date().getFullYear();
 document.getElementById("currentYear").textContent = currentYear;
 
-// إغلاق القائمة المنبثقة عند النقر خارجها
+// Closes the popup when you click outside it
 document.addEventListener("click", function (event) {
   if (menuControl.checked && !event.target.matches("#menuControl")) {
     menuControl.checked = false;
@@ -105,48 +105,15 @@ document.addEventListener("click", function (event) {
   }
 });
 
-// // تنفيذ الأمر المحدد وإغلاق القائمة المنبثقة عند النقر على رابط داخل القائمة
-// const menuLinks = document.querySelectorAll("#mainmenu .container nav a");
-// menuLinks.forEach(function (link) {
-//   link.addEventListener("click", function (event) {
-//     event.preventDefault(); // لمنع الانتقال إلى الصفحة الجديدة
-//     // تنفيذ الأمر المطلوب عند النقر على الرابط هنا
-//     closeBurgerMenu();
-//   });
-// });
-
-// closMenu.forEach((elem) => {
-//   elem.addEventListener("click", closeBurgerMenu);
-// });
-
-// function closeBurgerMenu() {
-//   if (window.innerWidth < 992) {
-//     nav.style.display = "none";
-//     menuControl.checked = false;
-//   } else {
-//     nav.style.display = "block";
-//     menuControl.checked = true;
-//   }
-// }
-
-const menuLinks = document.querySelectorAll("#mainmenu .container nav a");
+// Closes the popup when the is clicked <a></a>
+let menuLinks = document.querySelectorAll("#mainmenu .container nav a");
 menuLinks.forEach(function (link) {
   link.addEventListener("click", function (event) {
-    // event.preventDefault(); // لمنع الانتقال إلى الصفحة الجديدة
-    // تنفيذ الأمر المطلوب عند النقر على الرابط هنا
     closeBurgerMenu();
   });
 });
 
-// const header = document.getElementById("mainmenu");
-// header.addEventListener("click", function (event) {
-//   // التأكد من أن العنصر الذي تم النقر عليه ينتمي إلى الناف بار نفسها
-//   if (!event.target.closest("nav")) {
-//     closeBurgerMenu();
-//   }
-// });
-
 function closeBurgerMenu() {
-  const menuControl = document.getElementById("menuControl");
+  let menuControl = document.getElementById("menuControl");
   menuControl.checked = false;
 }
