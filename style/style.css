@@ -232,7 +232,7 @@ h2 {
   text-transform: capitalize;
   font-size: 1.5rem;
   font-weight: 400;
-  text-align: center;
+  text-align: left;
   margin-bottom: 10px;
   background-color: var(--White);
   line-height: 1.5;
@@ -385,6 +385,7 @@ h2 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: center;
 }
 #sec4 .container h2 {
   color: var(--color2);
@@ -557,7 +558,7 @@ h2 {
     width: 720px;
   }
   #sec2 p {
-    text-align: justify;
+    /* text-align: left; */
   }
   #sec3 .container a {
     margin: 20px;
@@ -643,17 +644,26 @@ h2 {
     clear: both;
   }
   #sec2 p {
-    text-align: justify;
+    /* text-align: justify; */
   }
-
+  #sec4 .container figure img {
+    width: 50%;
+    /* display: flex; */
+    /* justify-content: left; */
+    /* align-items: center; */
+  }
+  #sec4 .container figure figcaption {
+    width: 49%;
+  }
   #sec4 .container figure figcaption .figCont {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
     padding: 20px;
   }
   #sec4 .container figure figcaption .figCont p {
     width: 80%;
+    font-size: 1.5rem;
   }
   #sec4 .container figure figcaption .btnM {
     flex-wrap: wrap;
