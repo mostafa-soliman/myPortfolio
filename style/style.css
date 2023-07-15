@@ -63,13 +63,17 @@ body {
 .my_logo {
   width: 150px;
   margin-left: 20px;
+  z-index: 999;
 }
 #mainmenu {
   background-color: var(--White);
   padding: 5px 0;
-  position: absolute;
+  /* position: absolute; */
+  position: fixed;
   width: 100%;
-  top: 10px;
+  top: 0;
+  /* margin-bottom: 100px; */
+  /* top: 10px; */
   /* left: 0; */
 }
 #mainmenu .container {
@@ -169,6 +173,7 @@ i {
   justify-content: center;
   flex-wrap: wrap;
   overflow: hidden;
+  margin-top: 65px;
 }
 section .img_sec1 {
   /* width: 465px; */
@@ -213,7 +218,7 @@ h1 > span {
 
 h2 {
   color: var(--WhiteT);
-  margin: 50px 10px;
+  margin: 60px 10px;
   font-weight: 900;
   font-size: 2.5rem;
   text-align: center;
@@ -478,7 +483,7 @@ h2 {
   color: var(--WhiteT);
   margin: 20px 10px;
   font-weight: 900;
-  font-size: 2rem;
+  font-size: 1.6rem;
   text-align: center;
   text-transform: capitalize;
   line-height: 1.2;
@@ -530,6 +535,7 @@ h2 {
 /*           start footer             */
 /* ---------------------------------- */
 .attribution {
+  color: var(--WhiteT);
   text-align: center;
   padding: 10px 0;
 }

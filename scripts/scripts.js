@@ -92,6 +92,11 @@ function addWowClass() {
 document.addEventListener("DOMContentLoaded", function () {
   addWowClass();
 });
+
+// add copyright dynamic by js
+let currentYear = new Date().getFullYear();
+document.getElementById("currentYear").textContent = currentYear;
+
 // // إغلاق القائمة المنبثقة عند النقر خارجها
 // document.addEventListener("click", function (event) {
 //   if (menuControl.checked && !event.target.matches("#menuControl")) {
