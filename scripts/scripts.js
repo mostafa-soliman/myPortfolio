@@ -7,7 +7,7 @@ let img_src = document.getElementsByClassName("my_logo")[0];
 // let menuControl = document.getElementById("menuControl");
 // let nav = document.querySelector("#mainmenu .container nav ");
 
-let checked = false;
+let checked_mode = false;
 
 function toggleCheckbox() {
   toggle_btn.checked = !toggle_btn.checked;
@@ -15,18 +15,18 @@ function toggleCheckbox() {
 }
 toggle_btn.addEventListener("change", toggleMode);
 function toggleMode() {
-  if (checked === false) {
+  if (checked_mode === false) {
     nav_icon.className = "fa-solid fa-moon";
     body_mode.className = "dark";
     img_src.setAttribute("src", "./assets/images/logoDark.png");
-    checked = true;
+    checked_mode = true;
     localStorage.setItem("darkMode", "true"); // حفظ وضع الظلام في localStorage
   } else {
     nav_icon.className = "fa-regular fa-moon";
     body_mode.className = "";
     img_src.setAttribute("src", "./assets/images/logoLight.png");
 
-    checked = false;
+    checked_mode = false;
     localStorage.setItem("darkMode", "false"); // حفظ وضع النور في localStorage
   }
 }
