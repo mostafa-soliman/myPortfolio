@@ -178,12 +178,9 @@
         >
       </div>
     </section>
-    <div id="popup" class="popup">
+    <div id="popup" class="popup" onclick="closePopup()">
       <div class="popup-content">
-        <i
-          onclick="closePopup()"
-          class="close-popup fa-regular fa-circle-xmark"
-        ></i>
+        <i class="close-popup fa-regular fa-circle-xmark"></i>
 
         <h2 class="wow fadeInDown" data-wow-offset="20" data-wow-duration="2s">
           {My skills in...}
@@ -323,7 +320,7 @@
               rows="10"
               placeholder="MASSAGE"
             ></textarea>
-            <input type="submit" value="SEND" />
+            <input onclick="openpop_form()" type="submit" value="SEND" />
           </form>
         </div>
         <div id="div_sec7">
@@ -355,6 +352,13 @@
               ><i class="fa-solid fa-phone"></i
             ></a>
           </div>
+        </div>
+      </div>
+      <div id="popup_form" class="popup" onclick="closePopup()">
+        <div class="popup-content">
+          <i class="close-popup fa-regular fa-circle-xmark"></i>
+
+          <h2>Coming Soon...</h2>
         </div>
       </div>
     </section>
