@@ -57,68 +57,6 @@ function closePopup() {
   document.getElementById("popup_form").style.display = "none";
 }
 
-// add and remove active in navbar
-
-// function activateNavItem(element) {
-//   let navItems = document.querySelectorAll("nav a");
-//   navItems.forEach((item) => {
-//     item.classList.remove("active");
-//   });
-
-//   element.classList.add("active");
-// }
-
-// window.addEventListener("scroll", function () {
-//   let scrollPosition = window.scrollY;
-
-//   let sections = document.querySelectorAll("section");
-//   sections.forEach((section) => {
-//     let sectionTop = section.offsetTop;
-//     let sectionHeight = section.offsetHeight;
-
-//     if (
-//       scrollPosition >= sectionTop &&
-//       scrollPosition < sectionTop + sectionHeight
-//     ) {
-//       activateNavItem(section.id); // استدعاء الدالة مع تمرير معرف القسم
-//     }
-//   });
-// });
-
-// function activateNavItem(sectionId) {
-//   let navItems = document.querySelectorAll("nav a");
-//   navItems.forEach((item) => {
-//     item.classList.remove("active");
-//   });
-
-//   let targetNav = document.querySelector(`nav a[href="#${sectionId}"]`);
-//   targetNav.classList.add("active");
-// }
-
-// window.addEventListener("scroll", function () {
-//   let scrollPosition = window.scrollY;
-
-//   let sections = document.querySelectorAll("section");
-//   sections.forEach((section) => {
-//     let sectionTop = section.offsetTop;
-//     let sectionHeight = section.offsetHeight;
-
-//     if (
-//       scrollPosition >= sectionTop &&
-//       scrollPosition < sectionTop + sectionHeight
-//     ) {
-//       // إزالة العناصر المفعلة من قائمة التنقل
-//       let navItems = document.querySelectorAll("nav a");
-//       navItems.forEach((item) => {
-//         item.classList.remove("active");
-//       });
-
-//       // تفعيل العنصر المناسب في قائمة التنقل
-//       let targetNav = document.querySelector(`nav a[href="#${section.id}"]`);
-//       targetNav.classList.add("active");
-//     }
-//   });
-// });
 window.addEventListener("scroll", function () {
   let scrollPosition = window.scrollY;
 
