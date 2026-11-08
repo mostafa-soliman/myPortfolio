@@ -1,0 +1,39 @@
+/* ==========================================================================
+   themes.css — colour tokens, dark (default) + light via [data-theme]
+
+   Tokens
+     --bg  page background      --tx  primary text
+     --s1  raised surface       --mu  muted text
+     --bd  borders / hairlines  --on  text drawn on top of --ac
+     --ac  accent               --sh  hard offset shadow colour
+     --ok  success message
+
+   Every foreground/background pair below is verified >= 4.5:1 (WCAG AA)
+   by tools/check-contrast.py — run it after touching any value here.
+   ========================================================================== */
+
+/* Vermilion — dark (default) */
+:root {
+  --bg: #161210;
+  --s1: #211b17;
+  --tx: #f3ecdd;
+  --mu: #a89e8d;
+  --bd: #3b332b;
+  --ac: #ff6a3d;
+  --on: #161210;
+  --sh: #f3ecdd;
+  --ok: #4ade80;
+}
+
+/* Vermilion — light */
+:root[data-theme="light"] {
+  --bg: #f2ece0;
+  --s1: #fbf8f1;
+  --tx: #1b1612;
+  --mu: #6a604f;
+  --bd: #1b1612;
+  --ac: #c33619; /* darkened from #c8381a for AA on light bg */
+  --on: #fbf8f1;
+  --sh: #1b1612;
+  --ok: #147036;
+}

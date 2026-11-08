@@ -1,0 +1,165 @@
+/* ==========================================================================
+   responsive.css — mobile-first breakpoints (360px -> 1920px)
+   Desktop >= 1024px uses the sticky header nav; below that a fixed
+   bottom navigation bar takes over.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   <= 1023px : bottom navigation bar replaces the header links
+   -------------------------------------------------------------------------- */
+@media (max-width: 1023px) {
+  body {
+    padding-bottom: 86px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .bottom-nav {
+    display: flex;
+    position: fixed;
+    inset: auto 0 0 0;
+    z-index: 30;
+    background: var(--bg);
+    border-top: 2px solid var(--tx);
+    gap: 6px;
+    padding: 8px 8px calc(8px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+/* --------------------------------------------------------------------------
+   <= 820px : every multi-column grid collapses to one column
+   -------------------------------------------------------------------------- */
+@media (max-width: 820px) {
+  :root {
+    --sect-y: 56px;
+    --scroll-pad: 74px;
+  }
+
+  .hero__grid,
+  .about,
+  .contact {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .idcard {
+    max-width: 340px;
+  }
+
+  .skills {
+    grid-template-columns: 1fr;
+  }
+
+  .xrow {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .project__head {
+    grid-template-columns: 34px 1fr 34px;
+  }
+
+  .project__tech {
+    display: none;
+  }
+
+  .project__body {
+    padding-block-end: 24px;
+    padding-inline-start: 50px;
+    padding-inline-end: 4px;
+  }
+
+  .stats {
+    margin-top: 36px;
+  }
+
+  .stats__item {
+    padding: 18px 6px;
+  }
+
+  .stats__label {
+    font-size: 0.8rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   <= 640px : compact header controls, tighter hero
+   -------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  :root {
+    --gutter: 16px;
+  }
+
+  .logo {
+    font-size: 1.05rem;
+  }
+
+  .hdr__in {
+    gap: 8px;
+  }
+
+  .tools {
+    gap: 6px;
+  }
+
+  .tool-btn {
+    height: 34px;
+    padding: 0 10px;
+    font-size: 0.78rem;
+  }
+
+  .hero {
+    padding-top: 36px;
+  }
+
+  .cta {
+    gap: 12px;
+  }
+
+  .cta .btn {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+
+  .contact__big {
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
+
+  .footer {
+    font-size: 0.82rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   <= 400px : smallest supported viewport (360px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 400px) {
+  .logo {
+    font-size: 0.98rem;
+  }
+
+  .tool-btn {
+    padding: 0 8px;
+    font-size: 0.74rem;
+  }
+
+  .bottom-nav__item {
+    font-size: 0.66rem;
+    padding: 6px 0;
+  }
+
+  .stats__label {
+    font-size: 0.72rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   >= 1600px : keep the editorial measure from stretching too far
+   -------------------------------------------------------------------------- */
+@media (min-width: 1600px) {
+  :root {
+    --sect-y: 104px;
+  }
+}

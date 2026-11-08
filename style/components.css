@@ -1,0 +1,787 @@
+/* ==========================================================================
+   components.css — buttons, cards, projects, gallery, lightbox, form, nav
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Logo + header controls
+   -------------------------------------------------------------------------- */
+.logo {
+  font-family: var(--font-serif);
+  font-weight: 900;
+  font-size: 1.25rem;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.logo__dot {
+  color: var(--ac);
+  font-style: normal;
+}
+
+.nav__link {
+  padding: 6px 14px;
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--mu);
+  border-radius: 0;
+}
+
+.nav__link.is-active {
+  color: var(--on);
+  background: var(--ac);
+  font-weight: 700;
+}
+
+.nav__link:not(.is-active):hover {
+  color: var(--tx);
+}
+
+.tool-btn {
+  height: 38px;
+  padding: 0 14px;
+  border: 1px solid var(--bd);
+  background: transparent;
+  color: var(--tx);
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.tool-btn:hover {
+  border-color: var(--ac);
+  color: var(--ac);
+}
+
+/* --------------------------------------------------------------------------
+   Buttons
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 24px;
+  border: 2px solid var(--tx);
+  background: var(--bg);
+  color: var(--tx);
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: var(--shadow-btn);
+  transition: transform var(--dur), box-shadow var(--dur);
+}
+
+.btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--sh);
+}
+
+.btn:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 var(--sh);
+}
+
+.btn--primary {
+  background: var(--ac);
+  color: var(--on);
+  border-color: var(--tx);
+}
+
+.btn--sm {
+  padding: 8px 16px;
+  font-size: 0.88rem;
+  box-shadow: var(--shadow-btn-sm);
+}
+
+.btn--sm:hover {
+  box-shadow: 1px 1px 0 var(--sh);
+}
+
+.btn[disabled] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: var(--shadow-btn);
+}
+
+.arr {
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   Hero
+   -------------------------------------------------------------------------- */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: 1px solid var(--bd);
+  padding: 6px 14px;
+  margin-bottom: 22px;
+}
+
+.tag::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--ok);
+  flex: none;
+}
+
+.hero__name {
+  font-family: var(--font-serif);
+  font-size: clamp(3.4rem, 11vw, 8rem);
+  line-height: 0.92;
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+:root[lang="ar"] .hero__name {
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+
+.hero__name em {
+  color: var(--ac);
+  font-style: normal;
+}
+
+.role {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin: 18px 0 12px;
+  font-weight: 500;
+}
+
+:root[lang="ar"] .role {
+  font-style: normal;
+  font-weight: 700;
+}
+
+.lead {
+  color: var(--mu);
+  max-width: 540px;
+  font-size: 1.08rem;
+}
+
+.cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+/* Identity card */
+.idcard {
+  border: 2px solid var(--tx);
+  background: var(--s1);
+  box-shadow: var(--shadow-card);
+}
+
+.idcard__photo {
+  position: relative;
+  display: grid;
+  place-items: end center;
+  height: 290px;
+  overflow: hidden;
+  background: var(--ac);
+  border-bottom: 2px solid var(--tx);
+}
+
+.idcard__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.idcard dl {
+  margin: 0;
+  padding: 6px 18px 12px;
+}
+
+.idcard dt {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mu);
+  margin-top: 10px;
+}
+
+.idcard dd {
+  margin: 0;
+  font-weight: 700;
+}
+
+:root[lang="ar"] .idcard dt {
+  letter-spacing: 0;
+  font-size: 0.82rem;
+}
+
+/* Stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 56px;
+  border-block: 1px solid var(--bd);
+}
+
+.stats__item {
+  padding: 22px 10px;
+  text-align: center;
+}
+
+.stats__item + .stats__item {
+  border-inline-start: 1px solid var(--bd);
+}
+
+.stats__num {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.stats__label {
+  color: var(--mu);
+  font-size: 0.9rem;
+}
+
+/* Marquee */
+.marquee {
+  overflow: hidden;
+  background: var(--ac);
+  color: var(--on);
+  border-block: 2px solid var(--tx);
+  font-family: var(--font-serif);
+  font-weight: 900;
+  font-size: 1.2rem;
+  white-space: nowrap;
+}
+
+.marquee__track {
+  display: inline-block;
+  padding: 10px 0;
+  animation: marquee-scroll 32s linear infinite;
+  will-change: transform;
+}
+
+@keyframes marquee-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   About / skills
+   -------------------------------------------------------------------------- */
+.about__text {
+  font-size: 1.15rem;
+}
+
+.skills__item h3 {
+  margin: 0 0 4px;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ac);
+}
+
+:root[lang="ar"] .skills__item h3 {
+  letter-spacing: 0;
+  font-size: 0.95rem;
+}
+
+.skills__item p {
+  margin: 0;
+  font-size: 0.98rem;
+  color: var(--mu);
+}
+
+/* --------------------------------------------------------------------------
+   Experience
+   -------------------------------------------------------------------------- */
+.xrow__when {
+  color: var(--ac);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.xrow__title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.xrow ul {
+  margin: 10px 0 0;
+  padding-inline-start: 20px;
+  color: var(--mu);
+}
+
+/* --------------------------------------------------------------------------
+   Projects accordion
+   -------------------------------------------------------------------------- */
+.project {
+  border-top: var(--hairline);
+}
+
+.project:last-child {
+  border-bottom: var(--hairline);
+}
+
+.project__heading {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.project__head {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50px 1fr auto 36px;
+  gap: 16px;
+  align-items: center;
+  padding: 22px 4px;
+  background: none;
+  border: 0;
+  color: var(--tx);
+  font: inherit;
+  text-align: start;
+  cursor: pointer;
+}
+
+.project__num {
+  color: var(--mu);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.project__title {
+  font-family: var(--font-serif);
+  font-weight: 900;
+  font-size: clamp(1.6rem, 4.5vw, 2.8rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.project__tech {
+  color: var(--mu);
+  font-size: 0.9rem;
+}
+
+.project__toggle {
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--bd);
+  display: grid;
+  place-items: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1;
+  transition: transform 0.15s, background 0.15s, color 0.15s;
+}
+
+.project__head:hover .project__title {
+  color: var(--ac);
+}
+
+.project.is-open .project__toggle {
+  background: var(--ac);
+  color: var(--on);
+  border-color: var(--ac);
+  transform: rotate(45deg);
+}
+
+.project__body {
+  display: none;
+  max-width: 820px;
+  padding-block-end: 28px;
+  padding-inline-start: 66px;
+  padding-inline-end: 4px;
+}
+
+.project.is-open .project__body {
+  display: block;
+}
+
+.project__body > p {
+  margin: 0 0 12px;
+  font-size: 1.05rem;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 3px 12px;
+  border: 1px solid var(--ac);
+  color: var(--ac);
+  margin-inline-end: 10px;
+}
+
+.project__meta {
+  color: var(--mu);
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.project__links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+/* --------------------------------------------------------------------------
+   Screenshots gallery (device frames)
+   -------------------------------------------------------------------------- */
+.shots {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  padding: 20px 6px 16px;
+  margin-top: 6px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+}
+
+.shot {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+}
+
+.phone {
+  position: relative;
+  display: block;
+  width: var(--phone-w);
+  height: var(--phone-h);
+  border: 3px solid var(--tx);
+  border-radius: var(--radius-phone);
+  background: var(--s1);
+  overflow: hidden;
+  box-shadow: var(--shadow-phone);
+}
+
+/* speaker notch drawn on top of the screen */
+.phone::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  translate: -50% 0;
+  width: 34px;
+  height: 6px;
+  border-radius: 6px;
+  background: var(--tx);
+  z-index: 1;
+}
+
+.phone img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.shots--blur .phone {
+  filter: blur(5px);
+}
+
+.shots-note {
+  display: block;
+  color: var(--mu);
+  font-size: 0.85rem;
+  margin-top: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Lightbox
+   -------------------------------------------------------------------------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  padding: 24px 16px;
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.lightbox__panel {
+  position: relative;
+  z-index: 1;
+  width: min(92vw, 460px);
+  text-align: center;
+}
+
+.lightbox__frame {
+  position: relative;
+}
+
+.lightbox__img {
+  width: 100%;
+  max-height: 74vh;
+  object-fit: contain;
+  border: 3px solid var(--tx);
+  border-radius: var(--radius-phone);
+  background: var(--s1);
+  box-shadow: var(--shadow-card);
+}
+
+.lightbox.is-blurred .lightbox__img {
+  filter: blur(8px);
+}
+
+.lightbox__cap {
+  margin-top: 14px;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.lightbox__count {
+  margin-top: 4px;
+  color: var(--mu);
+  font-size: 0.85rem;
+}
+
+.lightbox__btn {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--tx);
+  background: var(--bg);
+  color: var(--tx);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: var(--shadow-btn-sm);
+  z-index: 2;
+}
+
+.lightbox__close {
+  top: 12px;
+  inset-inline-end: 12px;
+}
+
+.lightbox__nav {
+  top: 50%;
+  translate: 0 -50%;
+}
+
+.lightbox__nav--prev {
+  inset-inline-start: 12px;
+}
+
+.lightbox__nav--next {
+  inset-inline-end: 12px;
+}
+
+.lightbox__btn:hover {
+  background: var(--ac);
+  color: var(--on);
+  border-color: var(--ac);
+}
+
+/* --------------------------------------------------------------------------
+   Contact
+   -------------------------------------------------------------------------- */
+.contact__big {
+  font-family: var(--font-serif);
+  font-weight: 900;
+  font-size: clamp(2.4rem, 6vw, 4.4rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin: 0 0 20px;
+}
+
+.contact__big em {
+  color: var(--ac);
+  font-style: normal;
+}
+
+.contact__lead {
+  color: var(--mu);
+}
+
+.links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+
+.links a {
+  font-weight: 700;
+  text-underline-offset: 5px;
+}
+
+.links a:hover {
+  color: var(--ac);
+}
+
+.form {
+  display: grid;
+  gap: 18px;
+}
+
+.field {
+  display: grid;
+  gap: 4px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 2px;
+  border: 0;
+  border-bottom: 2px solid var(--bd);
+  background: transparent;
+  color: var(--tx);
+  font-size: 1.05rem;
+  border-radius: 0;
+}
+
+.input::placeholder {
+  color: var(--mu);
+  opacity: 0.85;
+}
+
+.input:focus {
+  border-color: var(--ac);
+}
+
+.input[aria-invalid="true"] {
+  border-color: var(--ac);
+}
+
+textarea.input {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.field__error {
+  color: var(--ac);
+  font-size: 0.85rem;
+  font-weight: 700;
+  min-height: 1.1em;
+}
+
+/* Off-screen without negative offsets: in RTL a -9999px left would extend
+   the scrollable area by ~10000px. Keep it 1px and clipped instead. */
+.honeypot {
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.form-msg {
+  min-height: 24px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.form-msg.is-ok {
+  color: var(--ok);
+}
+
+.form-msg.is-error {
+  color: var(--ac);
+}
+
+.form-note {
+  color: var(--mu);
+  font-size: 0.85rem;
+}
+
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Bottom navigation (shown < 1024px, see responsive.css)
+   -------------------------------------------------------------------------- */
+.bottom-nav {
+  display: none;
+}
+
+.bottom-nav__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 6px 2px;
+  min-height: 46px;
+  border: 0;
+  background: none;
+  color: var(--mu);
+  font-weight: 700;
+  font-size: 0.72rem;
+  cursor: pointer;
+}
+
+.bottom-nav__item svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.bottom-nav__item.is-active {
+  background: var(--ac);
+  color: var(--on);
+}

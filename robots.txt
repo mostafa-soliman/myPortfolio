@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Private / non-published sources
+Disallow: /assets/projects-original/
+Disallow: /assets/profile/photo-original.*
+
+Sitemap: https://mostafafadali.me/sitemap.xml

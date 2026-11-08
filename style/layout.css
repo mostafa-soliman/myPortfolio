@@ -1,0 +1,166 @@
+/* ==========================================================================
+   layout.css — page scaffolding, header, section grids, footer
+   Uses logical properties (margin-inline / padding-inline / inset-inline)
+   so RTL needs no extra rules.
+   ========================================================================== */
+
+.wrap {
+  max-width: var(--wrap-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* --------------------------------------------------------------------------
+   Sections
+   -------------------------------------------------------------------------- */
+.sect {
+  padding-block: var(--sect-y);
+  border-top: var(--hairline);
+}
+
+.sect__label {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ac);
+  font-weight: 700;
+  margin-bottom: 26px;
+}
+
+.sect__label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--bd);
+}
+
+.sect__label .sect__num {
+  font-variant-numeric: tabular-nums;
+}
+
+:root[lang="ar"] .sect__label {
+  letter-spacing: 0;
+  font-size: 0.95rem;
+}
+
+/* --------------------------------------------------------------------------
+   Header (desktop)
+   -------------------------------------------------------------------------- */
+.hdr {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 20;
+  background: var(--bg);
+  border-bottom: var(--hairline);
+}
+
+.hdr__in {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: var(--hdr-h);
+}
+
+.nav {
+  display: flex;
+  gap: 4px;
+}
+
+.tools {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* --------------------------------------------------------------------------
+   Hero
+   -------------------------------------------------------------------------- */
+.hero {
+  border-top: 0;
+  padding-top: 56px;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 48px;
+  align-items: end;
+}
+
+/* --------------------------------------------------------------------------
+   About
+   -------------------------------------------------------------------------- */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 48px;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px 28px;
+}
+
+/* --------------------------------------------------------------------------
+   Experience
+   -------------------------------------------------------------------------- */
+.xlist {
+  display: block;
+}
+
+.xrow {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 24px;
+  padding-block: 26px;
+  border-top: var(--hairline);
+}
+
+.xlist .xrow:last-child {
+  border-bottom: var(--hairline);
+}
+
+/* --------------------------------------------------------------------------
+   Contact
+   -------------------------------------------------------------------------- */
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 48px;
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+.footer {
+  border-top: var(--hairline);
+  padding: 26px var(--gutter);
+  text-align: center;
+  color: var(--mu);
+  font-size: 0.9rem;
+}
+
+.footer__inner {
+  max-width: var(--wrap-max);
+  margin-inline: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer a {
+  font-weight: 700;
+  text-underline-offset: 4px;
+}
+
+.footer a:hover {
+  color: var(--ac);
+}

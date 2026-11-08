@@ -1,389 +1,383 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-    <meta
-      name="description"
-      content="Mostafa Fadali - Passionate software engineer specializing in Angular front-end development. Crafting user-friendly web interfaces and robust solutions for exceptional user experiences. Download my CV and let's discuss your project. Hire me for captivating web development!"
-    />
-    <meta
-      name="keywords"
-      content="Mostafa Fadali, software engineer, Angular developer, front-end development, user-friendly web interfaces, robust solutions, exceptional user experiences, مصطفى فضالي, hire web developer, captivating web development, مطور واجهة أمامية , مبرمج مواقع ويب"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/images/mostafa_fadali.png"
-    />
-    <link rel="stylesheet" href="/style/style.css" />
-    <link rel="stylesheet" href="/style/all.css" />
-    <link rel="stylesheet" href="/style/animate.css" />
-    <title>Fadali Portfolio</title>
-  </head>
-  <body>
-    <header id="mainmenu">
-      <div class="container">
-        <!-- class="wow bounceIn my_logo"
-        data-wow-duration:="3s"
-        data-wow-iteration:="3"
-        data-wow-offset="20"
-        data-wow-delay="1s" -->
-        <img
-          class="my_logo"
-          src="./assets/images/logoLight.png"
-          alt="MostafaFadali"
-        />
-        <label class="burgerMenu" for="menuControl"
-          ><i class="fas fa-bars"></i
-        ></label>
-        <input type="checkbox" id="menuControl" />
-        <!-- onclick="closeBurgerMenu()" -->
-        <nav>
-          <div class="rightheader">
-            <div class="DLmode" onclick="toggleCheckbox()">
-              <!-- <label id="frnt_awsme" class="switch">
-              <input type="checkbox" id="light_dark_mode" />
-              <span class="slider"></span>
-            </label> -->
-              <i id="frnt_awsme" class="fa-regular fa-moon"></i>
-              <label id="modes" for="light_dark_mode"></label>
-              <input type="checkbox" name="" id="light_dark_mode" hidden />
+<html lang="en" dir="ltr" data-theme="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <link rel="preload" href="webfonts/dm-sans-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="webfonts/fraunces-variable.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Applies theme / language before first paint so there is no flash.
+     Keep this tiny and inline — it must run before the stylesheets. -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      try {
+        var lang = localStorage.getItem("lang");
+        if (lang !== "en" && lang !== "ar") {
+          lang = (navigator.language || "en").toLowerCase().indexOf("ar") === 0 ? "ar" : "en";
+        }
+        var theme = localStorage.getItem("theme");
+        if (theme !== "dark" && theme !== "light") theme = "dark";
+
+        root.lang = lang;
+        root.dir = lang === "ar" ? "rtl" : "ltr";
+        root.dataset.theme = theme;
+
+        // Arabic pages render everything in Cairo, so preload that instead.
+        if (lang === "ar") {
+          var pre = document.createElement("link");
+          pre.rel = "preload";
+          pre.as = "font";
+          pre.type = "font/woff2";
+          pre.crossOrigin = "anonymous";
+          pre.href = "webfonts/cairo-arabic-variable.woff2";
+          document.head.appendChild(pre);
+        }
+      } catch (e) {
+        root.dataset.theme = "dark";
+      }
+    })();
+  </script>
+
+  <title>Mostafa Soliman Fadali — React Native &amp; Android Developer</title>
+  <meta name="description"
+    content="Portfolio of Mostafa Soliman Fadali, a mobile developer in Cairo building production React Native (Expo, TypeScript) apps for the Saudi market and native Android apps with Kotlin.">
+  <link rel="canonical" href="https://mostafafadali.me/">
+  <meta name="color-scheme" content="dark light">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mostafa Soliman Fadali">
+  <meta property="og:title" content="Mostafa Soliman Fadali — React Native &amp; Android Developer">
+  <meta property="og:description"
+    content="Portfolio of Mostafa Soliman Fadali, a mobile developer in Cairo building production React Native (Expo, TypeScript) apps for the Saudi market and native Android apps with Kotlin.">
+  <meta property="og:url" content="https://mostafafadali.me/">
+  <meta property="og:image" content="https://mostafafadali.me/assets/profile/photo.png">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ar_AR">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Mostafa Soliman Fadali — React Native &amp; Android Developer">
+  <meta name="twitter:description"
+    content="Portfolio of Mostafa Soliman Fadali, a mobile developer in Cairo building production React Native (Expo, TypeScript) apps for the Saudi market and native Android apps with Kotlin.">
+  <meta name="twitter:image" content="https://mostafafadali.me/assets/profile/photo.png">
+
+  <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+
+  <link rel="stylesheet" href="style/base.css">
+  <link rel="stylesheet" href="style/themes.css">
+  <link rel="stylesheet" href="style/layout.css">
+  <link rel="stylesheet" href="style/components.css">
+  <link rel="stylesheet" href="style/responsive.css">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mostafa Soliman Fadali",
+  "alternateName": "مصطفى سليمان فضالي",
+  "url": "https://mostafafadali.me/",
+  "image": "https://mostafafadali.me/assets/profile/photo.png",
+  "jobTitle": "React Native Developer",
+  "description": "Mobile developer building production React Native (Expo, TypeScript) applications for the Saudi market and native Android applications with Kotlin, Jetpack Compose and MVVM.",
+  "email": "mailto:m.fadaly52@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Cairo",
+    "addressCountry": "EG"
+  },
+  "knowsLanguage": ["ar", "en"],
+  "sameAs": [
+    "https://github.com/mostafa-soliman",
+    "https://www.linkedin.com/in/mostafa-soliman-fadali"
+  ]
+}
+</script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main" data-i="skip">Skip to content</a>
+
+  <!-- ======================================================= header ===== -->
+  <header class="hdr">
+    <div class="wrap hdr__in">
+      <a class="logo" href="#home" data-go="home" data-aria="ariaLogo">M.Fadali<i class="logo__dot"
+          aria-hidden="true">.</i></a>
+
+      <nav class="nav" aria-label="Main navigation" data-aria="ariaMainNav">
+        <a class="nav__link" href="#home" data-go="home" data-i="home">Home</a>
+        <a class="nav__link" href="#about" data-go="about" data-i="about">About</a>
+        <a class="nav__link" href="#experience" data-go="experience" data-i="experience">Experience</a>
+        <a class="nav__link" href="#projects" data-go="projects" data-i="projects">Projects</a>
+        <a class="nav__link" href="#contact" data-go="contact" data-i="contact">Contact</a>
+      </nav>
+
+      <div class="tools">
+        <button type="button" class="tool-btn" id="langBtn" data-i="langBtn" data-aria="ariaLang">AR</button>
+        <button type="button" class="tool-btn" id="themeBtn" data-aria="ariaTheme">Light</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <!-- ========================================================== hero ===== -->
+    <section id="home" class="hero sect">
+      <div class="wrap">
+        <div class="hero__grid">
+          <div>
+            <p class="tag" data-i="avail">Open to freelance &amp; full-time</p>
+            <h1 class="hero__name" data-h="name">Mostafa<br>Fadali<em>.</em></h1>
+            <p class="role" data-i="role">React Native Developer</p>
+            <p class="lead" data-i="lead">I build production mobile apps, cross-platform with React Native and native
+              with Kotlin, with clean code and dependable APIs.</p>
+            <div class="cta">
+              <a class="btn btn--primary" id="cvLink" href="assets/cv/Mostafa_Soliman_ReactNative_CV.pdf"
+                target="_blank" rel="noopener" data-i="cv" data-aria="cvAria">Download CV</a>
+              <button type="button" class="btn" data-go="contact" data-i="talk">Contact me</button>
             </div>
-            <a
-              href="https://github.com/mostafa-soliman"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="giticon"
-              ><i class="fa-brands fa-github"></i
-            ></a>
           </div>
-          <a href="#sec1" class="active" onclick="activateNavItem(this)"
-            >Home</a
-          >
-          <a href="#sec2" onclick="activateNavItem(this); closeBurgerMenu(); "
-            >About</a
-          >
-          <a href="#sec3" onclick="activateNavItem(this); closeBurgerMenu(); "
-            >Skills</a
-          >
-          <a href="#sec4" onclick="activateNavItem(this); closeBurgerMenu(); "
-            >Projects</a
-          >
-          <!-- <a href="#sec5" onclick="activateNavItem(this); closeBurgerMenu(); "
-            >Services</a
-          > -->
-          <a href="#sec5" onclick="activateNavItem(this); closeBurgerMenu(); "
-            >Contact</a
-          >
-        </nav>
-      </div>
-    </header>
-    <section id="sec1">
-      <div class="container">
-        <img
-          src="./assets/images/img2_sec1.png"
-          alt="mostafa_fadali_img"
-          class="wow slideInRight img_sec1"
-          data-wow-duration="2s"
-        />
-        <article id="arti_sec1" class="wow slideInLeft" data-wow-duration="2s">
-          <h1>
-            Hi there, I'm a <br />passionate<br />
-            <span
-              >software <br />
-              engineer</span
-            >
-          </h1>
-          <p>
-            my name is <b>Mostafa Fadali,</b> I specialize in front-end
-            development, with a strong focus on Angular. <br />I'm dedicated to
-            crafting robust solutions that deliver exceptional UX
-          </p>
-          <a
-            class="btn"
-            href="./assets/CV Mostafa Fadaly FRONT-END-DEVELOPER.pdf"
-            download
-            >Download CV<i class="fa-solid fa-arrow-down fa-bounce"></i
-          ></a>
-        </article>
-      </div>
-    </section>
-    <section id="sec2">
-      <div class="container">
-        <h2 class="wow fadeInDown" data-wow-offset="20" data-wow-duration="2s">
-          ABOUT ME
-        </h2>
-        <div class="container1">
-          <img
-            class="img_sec2"
-            src="./assets/images/img_sec2.png"
-            alt=""
-            srcset=""
-          />
-          <p>
-            I am a <b>Frontend Web Developer</b> specializing in user-friendly
-            interfaces for websites and web applications.<br />
-            With a Bachelor's degree in Computer and Systems Engineering, I have
-            a solid foundation in core computer science topics and strong
-            problem-solving skills.<br />
-            I enjoy sharing my knowledge and expertise on
-            <a href="https://www.linkedin.com/in/mostafa-soliman-fadali/"
-              >LinkedIn</a
-            >
-          </p>
-          <a href="" class="brn"></a>
-        </div>
-      </div>
-    </section>
-    <section id="sec3">
-      <h2 class="wow fadeInDown" data-wow-offset="20" data-wow-duration="2s">
-        SKILLS
-      </h2>
-      <div class="container">
-        <a href="#sec3" onclick="openPopup('myBarHTML' ,'HTML','85' )"
-          ><i class="fa-brands fa-html5"></i> HTML
-        </a>
-        <a href="#sec3" onclick="openPopup('myBarCSS','CSS','80')"
-          ><i class="fa-brands fa-css3-alt"></i> CSS</a
-        >
-        <a href="#sec3" onclick="openPopup('myBarBootstrap','Bootstrap','85')"
-          ><i class="fa-brands fa-bootstrap"></i> Bootstrap</a
-        >
-        <a
-          href="#sec3"
-          onclick="openPopup('myBarJavaScript', 'JavaScript' ,'75')"
-          ><i class="fa-brands fa-js"></i> JavaScript</a
-        >
-        <a href="#sec3" onclick="openPopup('myBarAngular', 'Angular' ,'65' )"
-          ><i class="fa-brands fa-angular"></i> Angular</a
-        >
-        <a href="#sec3" onclick="openPopup('myBarGit','Git','80')"
-          ><i class="fa-brands fa-square-git"></i> Git</a
-        >
-        <a href="#sec3" onclick="openPopup('myBarReact','React','40')"
-          ><i class="fa-brands fa-react"></i> React</a
-        >
-        <a href="#sec3" onclick="openPopup('myBarSass', 'Sass','35')"
-          ><i class="fa-brands fa-sass"></i> Sass</a
-        >
-        <a href="#sec3" onclick="openPopup('myBarOOP', 'OOP','75' )">OOP</a>
-        <a href="#sec3" onclick="openPopup('myBarJSON', 'JSON','70' )">JSON</a>
-        <a href="#sec3" onclick="openPopup('myBarAPI', 'API','70' )">API</a>
-        <a
-          href="#sec3"
-          onclick="openPopup('myBarMaterial', 'ng Material','75' )"
-          >Angular<br />Material</a
-        >
-        <a href="#sec3" onclick="openPopup('myBarRXJs', 'RXJs','70' )">RXJs</a>
-        <a
-          href="#sec3"
-          onclick="openPopup('myBarTypeScript', 'TypeScript','65' )"
-          >TypeScript</a
-        >
-      </div>
-    </section>
-    <div id="popup" class="popup" onclick="closePopup()">
-      <div class="popup-content">
-        <i class="close-popup fa-regular fa-circle-xmark"></i>
 
-        <h2 class="wow fadeInDown" data-wow-offset="20" data-wow-duration="2s">
-          {My skills in...}
-        </h2>
-        <h3 id="popupTitle"></h3>
-        <div class="progress">
-          <div
-            class="progress-bar"
-            id="popupProgressBar"
-            role="progressbar"
-            aria-valuenow="0"
-            aria-valuemin="0"
-            aria-valuemax="100"
-          ></div>
-        </div>
-      </div>
-    </div>
-
-    <section id="sec4">
-      <h2 class="wow fadeInDown" data-wow-offset="20" data-wow-duration="2s">
-        MY FEATURED PROJECTS
-      </h2>
-      <div class="container">
-        <figure>
-          <h2>E-Commerce app using Angular</h2>
-
-          <img
-            class="wow slideInLeft"
-            data-wow-duration="2s"
-            src="./assets/images/markt.png"
-            alt="chocolate_market"
-            srcset=""
-          />
-          <figcaption>
-            <div class="figCont">
-              <p>
-                Chocolate Market is an e-commerce store in Egypt, offering user
-                accounts, product search, cart functionality, secure checkout,
-                and an admin panel.<br />
-                Developed with Angular, it provides a user-friendly interface
-                for a convenient online shopping experience.
-              </p>
-              <div class="btnM">
-                <a
-                  href="https://market-git-v-2-mostafa-soliman.vercel.app/"
-                  target="_blank"
-                  class="btn"
-                  >Life Demo<i
-                    class="fa-solid fa-arrow-up-right-from-square"
-                  ></i
-                ></a>
-                <a
-                  href="https://github.com/mostafa-soliman/market.git"
-                  target="_blank"
-                  class="btn"
-                  >Source Code<i
-                    class="fa-solid fa-arrow-up-right-from-square"
-                  ></i
-                ></a>
-              </div>
+          <aside class="idcard" data-aria="ariaProfileCard">
+            <div class="idcard__photo">
+              <img src="assets/profile/photo.webp" alt="Portrait of Mostafa Soliman Fadali" data-alt="photoAlt"
+                width="900" height="882" decoding="async">
             </div>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="container">
-        <figure>
-          <h2>Business Landing Page</h2>
-
-          <img
-            class="wow slideInLeft"
-            data-wow-duration="2s"
-            src="./assets/images/task2.png"
-            alt="BusinessLandingPage"
-            srcset=""
-          />
-          <figcaption>
-            <div class="figCont">
-              <p>
-                This is a creative agency website featuring a clean and modern
-                design.<br />
-                It has a user-friendly interface, showcasing the agency's work,
-                services, about section, and contact page.<br />
-                The website is responsive, providing a seamless experience
-                across devices.
-              </p>
-              <div class="btnM">
-                <a
-                  href="https://task6-mostafa-soliman.vercel.app/"
-                  target="_blank"
-                  class="btn"
-                  >Life Demo<i
-                    class="fa-solid fa-arrow-up-right-from-square"
-                  ></i
-                ></a>
-                <a href="" target="_blank" class="btn"
-                  >Source Code<i
-                    class="fa-solid fa-arrow-up-right-from-square"
-                  ></i
-                ></a>
-              </div>
-            </div>
-          </figcaption>
-        </figure>
-      </div>
-    </section>
-    <div id="div_sec5">
-      <h2 class="wow fadeInDown" data-wow-offset="20" data-wow-duration="2s">
-        Want to work with me?<br /><span>
-          Always feel Free to Contact & Hire me
-        </span>
-      </h2>
-      <a href="mailto: m.fadaly52@gmail.com" class="btn_Hire">Hire Me</a>
-    </div>
-    <section id="sec5">
-      <h2 class="wow fadeInDown" data-wow-offset="20" data-wow-duration="2s">
-        CONTACT
-      </h2>
-      <div class="container">
-        <h3
-          class="wow slideInLeft h22sec5"
-          data-wow-offset="20"
-          data-wow-duration="2s"
-        >
-          A Frontend focused Web Developer building the Frontend of Websites
-          and<br />
-          Web Applications that leads to the success of the overall product
-        </h3>
-        <div class="contenar_sec6">
-          <form action="">
-            <input type="text" name="" id="text" placeholder="NAME" />
-            <input type="email" name="" id="email" placeholder="EMAIL" />
-            <input type="text" name="" id="title" placeholder="TITLE" />
-            <textarea
-              name="massage"
-              id=""
-              cols="30"
-              rows="10"
-              placeholder="MASSAGE"
-            ></textarea>
-            <input onclick="openpop_form()" type="submit" value="SEND" />
-          </form>
+            <dl>
+              <dt data-i="d1">Focus</dt>
+              <dd>React Native · Android</dd>
+              <dt data-i="d2">Based in</dt>
+              <dd data-i="loc">Cairo, Egypt</dd>
+              <dt data-i="d3">Core stack</dt>
+              <dd>Kotlin · TypeScript</dd>
+            </dl>
+          </aside>
         </div>
-        <div id="div_sec7">
-          <h2
-            class="wow fadeInDown"
-            data-wow-offset="20"
-            data-wow-duration="2s"
-          >
-            GIT IN TOUCH !
-          </h2>
 
-          <div class="container">
-            <a
-              href="https://github.com/mostafa-soliman"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="giticon"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-            <a
-              href="https://www.linkedin.com/in/mostafa-soliman-fadali/"
-              target="_blank"
-              ><i class="fa-brands fa-linkedin"></i
-            ></a>
-            <a href="https://wa.me/00201128356597" target="_blank"
-              ><i class="fa-brands fa-whatsapp"></i
-            ></a>
-            <a href="tel:+201128356597" target="_blank"
-              ><i class="fa-solid fa-phone"></i
-            ></a>
+        <div class="stats">
+          <div class="stats__item">
+            <b class="stats__num">8K+</b>
+            <small class="stats__label" data-i="s1">iOS downloads (FLOD, 90 days)</small>
+          </div>
+          <div class="stats__item">
+            <b class="stats__num">3+</b>
+            <small class="stats__label" data-i="s2">Years of experience</small>
+          </div>
+          <div class="stats__item">
+            <b class="stats__num">2</b>
+            <small class="stats__label" data-i="s3">Platforms: Android &amp; iOS</small>
           </div>
         </div>
       </div>
-      <div id="popup_form" class="popup" onclick="closePopup()">
-        <div class="popup-content">
-          <i class="close-popup fa-regular fa-circle-xmark"></i>
+    </section>
 
-          <h2>Coming Soon...</h2>
+    <div class="marquee" dir="ltr" aria-hidden="true">
+      <div class="marquee__track" id="marqueeTrack"></div>
+    </div>
+
+    <!-- ========================================================= about ===== -->
+    <section id="about" class="sect">
+      <div class="wrap">
+        <h2 class="sect__label"><span>01 —</span><span data-i="about">About</span></h2>
+        <div class="about">
+          <p class="about__text" data-i="aboutp">I’m a mobile developer who ships. For the last year I’ve been building
+            subscription, payment and release workflows for apps serving the Saudi market, on top of two years of native
+            Android work.</p>
+          <div class="skills">
+            <div class="skills__item">
+              <h3>React Native</h3>
+              <p>Expo, Expo Router, TypeScript, Hooks, Context, Reanimated, RTL &amp; localization</p>
+            </div>
+            <div class="skills__item">
+              <h3>Native Android</h3>
+              <p>Kotlin, Jetpack Compose, MVVM / MVI, Retrofit, Room, Clean Architecture</p>
+            </div>
+            <div class="skills__item">
+              <h3>Web</h3>
+              <p>HTML, CSS, Bootstrap, JavaScript, Angular</p>
+            </div>
+            <div class="skills__item">
+              <h3>Tools</h3>
+              <p>Git, Azure DevOps, Postman, OpenAPI, Firebase, REST</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <hr />
+    <!-- ==================================================== experience ===== -->
+    <section id="experience" class="sect">
+      <div class="wrap">
+        <h2 class="sect__label"><span>02 —</span><span data-i="experience">Experience</span></h2>
+        <div class="xlist">
+          <div class="xrow">
+            <div><small class="xrow__when">Nov 2025 — <span data-i="now">Present</span></small></div>
+            <div>
+              <h3 class="xrow__title">React Native Developer · Fodek</h3>
+              <ul>
+                <li data-i="e1">Subscription flows: plans, branches, payment summary and freezing.</li>
+                <li data-i="e2">Shipped releases to Google Play and the App Store.</li>
+                <li data-i="e3">Expo Router, Reanimated, RTL and localization.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="xrow">
+            <div><small class="xrow__when">Dec 2023 — Nov 2025</small></div>
+            <div>
+              <h3 class="xrow__title">Android Developer · BonianTech</h3>
+              <ul>
+                <li data-i="e4">Native Android with Kotlin, Jetpack Compose and MVVM.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="xrow">
+            <div><small class="xrow__when">Oct 2023 — Dec 2023</small></div>
+            <div>
+              <h3 class="xrow__title">Frontend Developer · BonianTech</h3>
+              <ul>
+                <li data-i="e5">Improved the Prophets Call website (HTML, CSS, AngularJS).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <footer class="attribution">
-      &copy; Copyright <span id="currentYear"></span>. Made by
-      <a
-        href="https://www.linkedin.com/in/mostafa-soliman-fadali/"
-        target="_blank"
-        >mostafa soliman fadali</a
-      >.
-    </footer>
-    <script src="scripts/scripts.js"></script>
-    <script src="scripts/wow.min.js"></script>
-    <script>
-      new WOW().init();
-    </script>
-  </body>
+    <!-- ====================================================== projects ===== -->
+    <section id="projects" class="sect">
+      <div class="wrap">
+        <h2 class="sect__label"><span>03 —</span><span data-i="projects">Projects</span></h2>
+        <div id="projectList"></div>
+      </div>
+    </section>
+
+    <!-- ======================================================= contact ===== -->
+    <section id="contact" class="sect">
+      <div class="wrap">
+        <h2 class="sect__label"><span>04 —</span><span data-i="contact">Contact</span></h2>
+        <div class="contact">
+          <div>
+            <h2 class="contact__big" data-h="big">Let’s build<br>something<em>.</em></h2>
+            <p class="contact__lead" data-i="touchp">Have an app idea or a feature to ship? Send a message.</p>
+            <div class="links" id="socialLinks"></div>
+          </div>
+
+          <!-- <form class="form" id="contactForm" novalidate>
+            <div class="field">
+              <label class="visually-hidden" for="cName" data-i="fName">Your name</label>
+              <input class="input" id="cName" name="name" type="text" autocomplete="name" data-ph="fName"
+                aria-describedby="errName" required>
+              <span class="field__error" id="errName" hidden></span>
+            </div>
+
+            <div class="field">
+              <label class="visually-hidden" for="cEmail" data-i="fEmail">Your email</label>
+              <input class="input" id="cEmail" name="email" type="email" autocomplete="email" data-ph="fEmail"
+                aria-describedby="errEmail" required>
+              <span class="field__error" id="errEmail" hidden></span>
+            </div>
+
+            <div class="field">
+              <label class="visually-hidden" for="cSubject" data-i="fSubject">Subject</label>
+              <input class="input" id="cSubject" name="subject" type="text" data-ph="fSubject"
+                aria-describedby="errSubject" required>
+              <span class="field__error" id="errSubject" hidden></span>
+            </div>
+
+            <div class="field">
+              <label class="visually-hidden" for="cMessage" data-i="fMessage">Message</label>
+              <textarea class="input" id="cMessage" name="message" data-ph="fMessage" aria-describedby="errMessage"
+                required></textarea>
+              <span class="field__error" id="errMessage" hidden></span>
+            </div>
+
+            <input class="honeypot" id="cHoneypot" name="website" type="text" tabindex="-1" autocomplete="off"
+              aria-hidden="true">
+
+            <div class="form-actions">
+              <button class="btn btn--primary" type="submit" id="submitBtn">
+                <span class="spinner" id="submitSpinner" hidden aria-hidden="true"></span>
+                <span id="submitLabel" data-i="send">Send message</span>
+                <span class="arr" aria-hidden="true">→</span>
+              </button>
+              <a class="btn" id="mailtoBtn" href="#" hidden data-i="mailto">Send via email app</a>
+            </div>
+
+            <p class="form-msg" id="formMsg" role="status"></p>
+          </form> -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================= footer ===== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <span>© <span id="year">2026</span> Mostafa Soliman Fadali</span>
+    </div>
+  </footer>
+
+  <!-- ============================================ bottom navigation ===== -->
+  <nav class="bottom-nav" data-aria="ariaBottomNav">
+    <button type="button" class="bottom-nav__item" data-go="home">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M3 11l9-8 9 8v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z" />
+      </svg>
+      <span data-i="home">Home</span>
+    </button>
+    <button type="button" class="bottom-nav__item" data-go="about">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <circle cx="12" cy="8" r="4" />
+        <path d="M4 21c0-4 4-6 8-6s8 2 8 6" />
+      </svg>
+      <span data-i="about">About</span>
+    </button>
+    <button type="button" class="bottom-nav__item" data-go="experience">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <rect x="3" y="7" width="18" height="13" rx="2" />
+        <path d="M9 7V4h6v3" />
+      </svg>
+      <span data-i="experience">Experience</span>
+    </button>
+    <button type="button" class="bottom-nav__item" data-go="projects">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <rect x="3" y="3" width="7" height="7" rx="1" />
+        <rect x="14" y="3" width="7" height="7" rx="1" />
+        <rect x="3" y="14" width="7" height="7" rx="1" />
+        <rect x="14" y="14" width="7" height="7" rx="1" />
+      </svg>
+      <span data-i="projects">Projects</span>
+    </button>
+    <button type="button" class="bottom-nav__item" data-go="contact">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <rect x="3" y="5" width="18" height="14" rx="2" />
+        <path d="M3 7l9 6 9-6" />
+      </svg>
+      <span data-i="contact">Contact</span>
+    </button>
+  </nav>
+
+  <!-- ======================================================= lightbox ===== -->
+  <div class="lightbox" id="lightbox" hidden>
+    <div class="lightbox__backdrop" data-lb-close></div>
+    <div class="lightbox__panel" role="dialog" aria-modal="true" data-aria="lbLabel">
+      <div class="lightbox__frame">
+        <img class="lightbox__img" id="lightboxImg" src="" alt="">
+        <button type="button" class="lightbox__btn lightbox__close" id="lightboxClose" data-lb-close
+          data-aria="lbClose"><span aria-hidden="true">✕</span></button>
+        <button type="button" class="lightbox__btn lightbox__nav lightbox__nav--prev" data-lb-prev
+          data-aria="lbPrev"><span aria-hidden="true">‹</span></button>
+        <button type="button" class="lightbox__btn lightbox__nav lightbox__nav--next" data-lb-next
+          data-aria="lbNext"><span aria-hidden="true">›</span></button>
+      </div>
+      <p class="lightbox__cap" id="lightboxCap"></p>
+      <p class="lightbox__count" id="lightboxCount"></p>
+    </div>
+  </div>
+
+  <script type="module" src="scripts/main.js"></script>
+</body>
+
 </html>

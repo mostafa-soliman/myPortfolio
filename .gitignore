@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+Thumbs.db
+.vscode/
+assets/projects-original/
+assets/profile/photo-original.*
+assets/logo/logo-original.*

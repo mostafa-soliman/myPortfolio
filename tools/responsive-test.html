@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Responsive test harness — not part of the site</title>
+<style>
+  body { margin: 0; background: #333; font: 14px system-ui; color: #fff; }
+  .row { display: flex; align-items: flex-start; gap: 16px; padding: 16px; }
+  .cell { flex: none; }
+  .cell b { display: block; margin-bottom: 6px; }
+  iframe { border: 2px solid #f6a; background: #fff; display: block; }
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="cell"><b>360px</b>
+    <iframe src="../index.html" width="360" height="760" loading="eager"></iframe>
+  </div>
+  <div class="cell"><b>820px</b>
+    <iframe src="../index.html" width="820" height="760" loading="eager"></iframe>
+  </div>
+  <div class="cell"><b>1024px</b>
+    <iframe src="../index.html" width="1024" height="760" loading="eager"></iframe>
+  </div>
+  <div class="cell"><b>1920px</b>
+    <iframe src="../index.html" width="1920" height="760" loading="eager"></iframe>
+  </div>
+</div>
+</body>
+</html>
